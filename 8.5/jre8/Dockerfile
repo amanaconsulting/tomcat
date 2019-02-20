@@ -8,5 +8,5 @@ COPY *.war /usr/local/tomcat/webapps
 COPY JAAS.config /usr/local/tomcat
 COPY context.xml /usr/local/tomcat/conf
 COPY web.xml /usr/local/tomcat/conf
-ENV JAVA_OPTS="-Djava.security.auth.login.config="/usr/local/tomcat/JAAS.config" -Xmx1024m -XX:MaxPermSize=128m"
+ENV JAVA_OPTS="-Djava.security.auth.login.config="/usr/local/tomcat/JAAS.config" -Xmx1024m 
 EXPOSE 8080:8888
