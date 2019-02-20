@@ -4,7 +4,6 @@ USER root
 RUN apt-get -yqq update && apt-get -yqq install curl zip && rm -rf /var/lib/apt/lists/*
 
 user ${user}
-COPY *.war /usr/local/tomcat/webapps
 COPY JAAS.config /usr/local/tomcat
 COPY context.xml /usr/local/tomcat/conf
 COPY web.xml /usr/local/tomcat/conf
